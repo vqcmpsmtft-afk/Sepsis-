@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neonatal Sepsis Management Algorithm for Healthcare Staff</title>
+    <style>
+        @media print {
+            body { margin: 1cm; }
+            .page-break { page-break-before: always; }
+            table { page-break-inside: avoid; }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background: #fff;
+        }
+
+        h1 {
+            color: #1a5490;
+            text-align: center;
+            border-bottom: 4px solid #1a5490;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 24pt;
+        }
+
+        h2 {
+            color: #2c5aa0;
+            background: #e8f0f8;
+            padding: 10px 15px;
+            border-left: 5px solid #2c5aa0;
+            margin-top: 30px;
+            font-size: 18pt;
+        }
+
+        h3 {
+            color: #3d6bb3;
+            margin-top: 20px;
+            font-size: 14pt;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        h4 {
+            color: #4a7bc4;
+            margin-top: 15px;
+            font-size: 12pt;
+        }
+
+        .algorithm-box {
+            border: 2px solid #2c5aa0;
+            padding: 20px;
+            margin: 20px 0;
+            background: #f9fbfd;
+            border-radius: 8px;
+        }
+
+        .decision-box {
+            border: 2px solid #4CAF50;
+            padding: 15px;
+            margin: 15px 0;
+            background: #f1f8f4;
+            border-radius: 5px;
+        }
+
+        .warning-box {
+            border: 3px solid #d32f2f;
+            padding: 15px;
+            margin: 15px 0;
+            background: #ffebee;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            border: 2px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            background: #fff3e0;
+            border-radius: 5px;
+        }
+
+        .flowchart-arrow {
+            text-align: center;
+            font-size: 24px;
+            color: #2c5aa0;
+            margin: 10px 0;
+        }
+
+        .split-path {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .path-option {
+            flex: 1;
+            margin: 0 10px;
+            padding: 15px;
+            border: 2px solid #666;
+            background: #f5f5f5;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th {
+            background: #2c5aa0;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        .checkbox {
+            margin-right: 8px;
+        }
+
+        .checkbox::before {
+            content: "☐ ";
+            font-size: 16px;
+        }
+
+        .emphasis {
+            font-weight: bold;
+            color: #d32f2f;
+        }
+
+        .quick-ref-card {
+            border: 3px solid #1a5490;
+            padding: 20px;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .card-title {
+            background: #1a5490;
+            color: white;
+            padding: 10px;
+            margin: -20px -20px 15px -20px;
+            font-weight: bold;
+            font-size: 16pt;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .red-flag {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        .medication-dose {
+            background: #e3f2fd;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #1976d2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>NEONATAL SEPSIS MANAGEMENT ALGORITHM FOR HEALTHCARE STAFF</h1>
+
+<!-- ALGORITHM 1 -->
+<div class="algorithm-box">
+    <h2>ALGORITHM 1: INITIAL ASSESSMENT & TRIAGE</h2>
+
+    <div class="decision-box">
+        <h4>NEWBORN INFANT (0-28 DAYS OF LIFE)</h4>
+    </div>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <div class="decision-box">
+        <h4>SCREEN FOR RISK FACTORS & CLINICAL SIGNS</h4>
+    </div>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <div class="decision-box">
+        <h4>ANY RISK FACTORS OR CLINICAL SIGNS PRESENT?</h4>
+    </div>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <div class="split-path">
+        <div class="path-option" style="border-color: #d32f2f; background: #ffebee;">
+            <strong>YES</strong>
+            <div class="flowchart-arrow">↓</div>
+            <p>PROCEED TO ALGORITHM 2</p>
+        </div>
+        <div class="path-option" style="border-color: #4CAF50; background: #f1f8f4;">
+            <strong>NO</strong>
+            <div class="flowchart-arrow">↓</div>
+            <p>ROUTINE CARE<br>Continue monitoring</p>
+        </div>
+    </div>
+</div>
+
+<!-- ALGORITHM 2 -->
+<div class="algorithm-box page-break">
+    <h2>ALGORITHM 2: RISK STRATIFICATION</h2>
+
+    <div class="decision-box">
+        <h4>RISK FACTOR IDENTIFICATION</h4>
+    </div>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <div class="decision-box">
+        <h4>DETERMINE SEPSIS TYPE</h4>
+    </div>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <div class="split-path">
+        <div class="path-option">
+            <strong>AGE < 72 HOURS</strong>
+            <div class="flowchart-arrow">↓</div>
+            <p><strong>EARLY-ONSET SEPSIS (EOS)</strong><br>→ Algorithm 3</p>
+        </div>
+        <div class="path-option">
+            <strong>AGE > 72 HOURS</strong>
+            <div class="flowchart-arrow">↓</div>
+            <p><strong>LATE-ONSET SEPSIS (LOS)</strong><br>→ Algorithm 4</p>
+        </div>
+    </div>
+</div>
+
+<!-- ALGORITHM 3 -->
+<div class="algorithm-box page-break">
+    <h2>ALGORITHM 3: EARLY-ONSET SEPSIS (EOS) PATHWAY</h2>
+
+    <h3>Step 1: Risk Assessment</h3>
+
+    <div class="info-box">
+        <h4>MATERNAL/PERINATAL RISK FACTORS PRESENT?</h4>
+        <ul style="list-style: none; padding-left: 0;">
+            <li class="checkbox">Maternal fever ≥38°C during labor</li>
+            <li class="checkbox">Prolonged ROM ≥18 hours</li>
+            <li class="checkbox">Maternal GBS positive/unknown</li>
+            <li class="checkbox">Chorioamnionitis (clinical/histological)</li>
+            <li class="checkbox">Maternal UTI</li>
+            <li class="checkbox">Preterm birth <37 weeks</li>
+            <li class="checkbox">Inadequate intrapartum antibiotic prophylaxis</li>
+        </ul>
+    </div>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <h3>Step 2: Clinical Assessment</h3>
+
+    <div class="info-box">
+        <h4>CLINICAL SIGNS OF SEPSIS</h4>
+
+        <h4>RESPIRATORY:</h4>
+        <ul style="list-style: none; padding-left: 0;">
+            <li class="checkbox">Tachypnea >60/min</li>
+            <li class="checkbox">Apnea</li>
+            <li class="checkbox">Grunting</li>
+            <li class="checkbox">Retractions</li>
+            <li class="checkbox">Cyanosis</li>
+        </ul>
+
+        <h4>CARDIOVASCULAR:</h4>
+        <ul style="list-style: none; padding-left: 0;">
+            <li class="checkbox">Tachycardia >160/min</li>
+            <li class="checkbox">Bradycardia <100/min</li>
+            <li class="checkbox">Capillary refill >3 sec</li>
+            <li class="checkbox">Hypotension</li>
+        </ul>
+
+        <h4>GENERAL:</h4>
+        <ul style="list-style: none; padding-left: 0;">
+            <li class="checkbox">Temperature instability (fever >38°C or hypothermia <36°C)</li>
+            <li class="checkbox">Lethargy/irritability</li>
+            <li class="checkbox">Poor feeding</li>
+            <li class="checkbox">Hypotonia</li>
+            <li class="checkbox">Seizures</li>
+        </ul>
+
+        <h4>GASTROINTESTINAL:</h4>
+        <ul style="list-style: none; padding-left: 0;">
+            <li class="checkbox">Vomiting</li>
+            <li class="checkbox">Abdominal distension</li>
+            <li class="checkbox">Jaundice (early onset)</li>
+        </ul>
+
+        <h4>SKIN:</h4>
+        <ul style="list-style: none; padding-left: 0;">
+            <li class="checkbox">Petechiae/purpura</li>
+            <li class="checkbox">Mottling</li>
+            <li class="checkbox">Pallor</li>
+        </ul>
+    </div>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <h3>Step 3: Decision Pathway</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Clinical Scenario</th>
+                <th>Action Required</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>HIGH RISK:</strong><br>Clinical signs + Risk factors</td>
+                <td><span class="emphasis">FULL SEPSIS WORKUP + START ANTIBIOTICS IMMEDIATELY</span></td>
+            </tr>
+            <tr>
+                <td><strong>MODERATE RISK:</strong><br>Clinical signs OR multiple risk factors</td>
+                <td><span class="emphasis">FULL SEPSIS WORKUP + START ANTIBIOTICS</span></td>
+            </tr>
+            <tr>
+                <td><strong>LOW RISK:</strong><br>Single minor risk factor, no clinical signs</td>
+                <td>Limited workup (CBC, CRP)<br>Observe closely for 48 hours<br>Consider antibiotics based on results</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <h3>Step 4: Investigations for EOS</h3>
+
+    <div class="info-box">
+        <h4>FULL SEPSIS WORKUP:</h4>
+        <ul style="list-style: none; padding-left: 0;">
+            <li class="checkbox">Blood culture (before antibiotics)</li>
+            <li class="checkbox">Complete blood count (CBC) with differential</li>
+            <li class="checkbox">C-reactive protein (CRP)</li>
+            <li class="checkbox">Blood glucose</li>
+            <li class="checkbox">Lumbar puncture (if infant stable and high suspicion)</li>
+            <li class="checkbox">Chest X-ray (if respiratory symptoms)</li>
+            <li class="checkbox">Consider: Blood gas, electrolytes, lactate</li>
+        </ul>
+        <p><span class="emphasis">⚠️ DO NOT DELAY ANTIBIOTICS WAITING FOR LP</span></p>
+    </div>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <h3>Step 5: Empiric Antibiotic Therapy for EOS</h3>
+
+    <div class="medication-dose">
+        <h4>STANDARD EOS EMPIRIC THERAPY:</h4>
+        <p><strong>AMPICILLIN</strong></p>
+        <ul>
+            <li>Dose: 50 mg/kg IV</li>
+            <li>< 7 days old: Every 12 hours</li>
+            <li>≥ 7 days old: Every 8 hours</li>
+        </ul>
+
+        <p style="margin-top: 15px;"><strong>PLUS</strong></p>
+
+        <p><strong>GENTAMICIN</strong></p>
+        <ul>
+            <li>Dose: 4-5 mg/kg IV once daily</li>
+            <li>Check levels after 3rd dose</li>
+            <li>Target peak: 5-10 mcg/mL</li>
+            <li>Target trough: < 2 mcg/mL</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h4>ALTERNATIVE IF MENINGITIS SUSPECTED:</h4>
+        <div class="medication-dose">
+            <p><strong>AMPICILLIN (same dosing as above)</strong></p>
+            <p><strong>PLUS</strong></p>
+            <p><strong>CEFOTAXIME 50 mg/kg IV</strong></p>
+            <ul>
+                <li>< 7 days old: Every 12 hours</li>
+                <li>≥ 7 days old: Every 8 hours</li>
+            </ul>
+        </div>
+        <p>Note: Cefotaxime preferred over gentamicin for meningitis due to better CSF penetration</p>
+    </div>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <div class="decision-box">
+        <p style="text-align: center;"><strong>PROCEED TO ALGORITHM 5</strong><br>(Culture Results Decision)</p>
+    </div>
+</div>
+
+<!-- ALGORITHM 4 -->
+<div class="algorithm-box page-break">
+    <h2>ALGORITHM 4: LATE-ONSET SEPSIS (LOS) PATHWAY</h2>
+
+    <div class="decision-box">
+        <h4>INFANT >72 HOURS OLD WITH SEPSIS SIGNS</h4>
+    </div>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <h3>Step 1: Assess Risk Factors</h3>
+
+    <div class="info-box">
+        <h4>LOS RISK FACTORS:</h4>
+        <ul style="list-style: none; padding-left: 0;">
+            <li class="checkbox">Prematurity/Very Low Birth Weight (VLBW)</li>
+            <li class="checkbox">Central venous lines</li>
+            <li class="checkbox">Mechanical ventilation</li>
+            <li class="checkbox">Prolonged hospitalization</li>
+            <li class="checkbox">Previous antibiotic exposure</li>
+            <li class="checkbox">Parenteral nutrition</li>
+            <li class="checkbox">Invasive procedures</li>
+            <li class="checkbox">Immunocompromised state</li>
+        </ul>
+    </div>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <h3>Step 2: Clinical Signs Present?</h3>
+    <p>(Use same clinical signs checklist as Algorithm 3)</p>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <div class="decision-box" style="background: #ffebee; border-color: #d32f2f;">
+        <p style="text-align: center;"><strong>IF YES → FULL SEPSIS WORKUP</strong></p>
+    </div>
+
+    <div class="flowchart-arrow">↓</div>
+
+    <h3>Step 3: Investigations for LOS</h3>
+
+    <div class="info-box">
+        <h4>COMPREHENSIVE WORKUP FOR LOS:</h4>
+        <ul style="list-style: none; padding-left: 0;">
+            <li class="checkbox">Blood culture (peripheral + from line if present)</li>
+            <li class="checkbox">CBC with differential</li>
+            <li class="checkbox">C-reactive protein (CRP)</li>
+            <li class="checkbox">Blood glucose, electrolytes</li>
+            <li class="checkbox">Urine culture (catheter/suprapubic aspiration)</li>
+            <li class="checkbox">Lumbar puncture (if infant stable)</li>
+            <li class="checkbox">Chest X-ray (
